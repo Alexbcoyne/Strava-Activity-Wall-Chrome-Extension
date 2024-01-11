@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Strava Extension",
+  "version": "1.0",
+  "description": "Enhance Strava with additional features",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.strava.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "images/icon1.png"
+  },
+  "action": {
+    "default_icon": "images/icon1.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/icon1.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
